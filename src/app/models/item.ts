@@ -6,4 +6,8 @@ export class Item
   price !:number;
   quality!: number;
 
+  total():number{
+    return (this.price * this.quality);
+  }
+
 }
