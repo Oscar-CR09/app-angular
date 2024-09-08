@@ -11,7 +11,7 @@ import { TotalComponent } from '../total/total.component';
 @Component({
   selector: 'app-invoice',
   standalone: true,
-  imports: [InvoiceViewComponent,ClientViewComponent,CompanyViewComponent,ListItemsComponent,TotalComponent],
+  imports: [InvoiceViewComponent,ClientViewComponent,CompanyViewComponent,ListItemsComponent,TotalComponent,RowItemComponent],
   templateUrl: './invoice.component.html'
 })
 export class InvoiceComponent implements OnInit{
@@ -22,6 +22,11 @@ export class InvoiceComponent implements OnInit{
 
     ngOnInit(): void {
       this.invoice = this.service.getInvoice();
+
+    }
+
+    removeItem(id:number){
+      this.invoice.items=this.invoice.items.filter(item => item.id !=id);
 
     }
 }
