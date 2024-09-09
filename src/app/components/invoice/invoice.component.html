@@ -22,7 +22,7 @@
 
         <total [total]="invoice.total"/>
 
-        <form-item></form-item>
+        <form-item (addItemEventEmitter)="addIten($event)"></form-item>
 
       </div>
     </div>

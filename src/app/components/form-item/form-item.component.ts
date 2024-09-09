@@ -17,21 +17,21 @@ export class FormItemComponent {
 
     product:'',
     price:'',
-    quantity:''
+    quality:''
 
   }
 
   onSubmit():void{
-    this.addItemEventEmitter.emit(({id:this.counterId,...this.item}));
+    this.addItemEventEmitter.emit({id:this.counterId,...this.item});
     this.counterId++;
 
     this.item={
 
       product:'',
       price:'',
-      quantity:''
+      quality:''
   
     };
-    
+
   }
 }
