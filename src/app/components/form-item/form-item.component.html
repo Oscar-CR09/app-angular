@@ -1,1 +1,29 @@
-<p></p>
+<form class="w-50" (ngSubmit)="">
+
+    <input name="product"
+    placeholder="Producto"
+    class="form-control m-3"
+    [(ngModel)]="item.product"
+    >
+
+
+    <input name=""
+    placeholder="Precio"
+    class="form-control m-3"
+    [(ngModel)]="item.price"
+    >
+
+
+    <input name=""
+    placeholder="Cantidad"
+    class="form-control m-3"
+    [(ngModel)]="item.quantity"
+    >
+
+    <button class="btn btn-primary m-3">
+
+      Nuevo Item
+
+    </button>
+
+</form>
